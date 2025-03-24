@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 
 class AuthController extends BaseController
 {

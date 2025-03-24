@@ -3,14 +3,14 @@
 namespace App\Controllers;
 
 use App\Models\TodoModel;
-use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 
-class TodoController extends Controller
+class TodoController extends BaseController
 {
   public function addTodo()
   {
-    $todoModel = new TodoModel();
 
+    $todoModel = new TodoModel();
     // ✅ Get and cast user_id to integer
     $userId = (int) session('user_id');
     $task = $this->request->getPost('task');

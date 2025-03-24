@@ -37,7 +37,7 @@
         <!-- Edit Todo Form -->
         <form action="<?= site_url('updateTodo') ?>" method="POST">
           <input type="hidden" name="id" value="<?= esc($todo['id']) ?>">
-
+          <?= csrf_field() ?>
           <div class="mb-3">
             <label for="task" class="form-label">Edit Task</label>
             <input type="text" name="task" id="task" class="form-control" value="<?= esc($todo['task']) ?>" required>
